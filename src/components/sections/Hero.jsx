@@ -19,12 +19,9 @@ export default function Hero({ query, onQueryChange, onSurprise }) {
     <section className="pt-20 sm:pt-28 pb-12 sm:pb-20 px-4 sm:px-6 max-w-7xl mx-auto fade-up">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-stretch">
         <div className="lg:col-span-7">
-          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-orange-50 border border-orange-100 text-primary-ink mb-6 sm:mb-8">
-            <Icon name="verified" fill className="text-sm" style={{ color: '#F04400' }} />
-            <span className="font-label text-[10px] sm:text-xs uppercase font-bold tracking-widest">Google Summer of Code 2026</span>
-          </div>
+
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold font-headline tracking-tighter text-zinc-900 mb-4 sm:mb-6 leading-[0.95]">
-            Find Your<br /><span className="text-primary italic">Perfect GSoC Org</span>
+            Find Your<br /><span className="text-primary italic">Perfect Org</span>
           </h1>
           <p className="text-base sm:text-lg text-zinc-600 max-w-xl mb-8 sm:mb-10 leading-relaxed">
             Browse all <strong>{ORGS.length}</strong> organizations. Filter by language, domain, competition, and live GitHub activity. Land your summer internship.
@@ -64,9 +61,8 @@ export default function Hero({ query, onQueryChange, onSurprise }) {
               id="surpriseBtn"
               onClick={onSurprise}
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-primary-container text-black rounded-full text-sm font-bold hover:shadow-lg hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:ring-offset-2"
-              aria-label="🎲 Surprise Me! - Open a random organization"
             >
-              🎲 Surprise Me!
+              Random!
             </button>
           </div>
 

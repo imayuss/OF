@@ -43,7 +43,7 @@ export default function OrgDirectory({ filters }) {
         <span className="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary-ink">Find projects that fit you</span>
         <h2 className="text-4xl md:text-5xl font-extrabold font-headline tracking-tighter mt-2">Organizations</h2>
         <p className="text-zinc-600 dark:text-zinc-400 mt-4 max-w-2xl">
-          Browse and filter GSoC 2026 organizations by tech stack, difficulty level, and interests to discover projects that match your skills and goals.
+          Browse and filter organizations by tech stack, difficulty level, and interests to discover projects that match your skills and goals.
         </p>
       </div>
 

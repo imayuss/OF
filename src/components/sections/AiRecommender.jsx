@@ -78,7 +78,7 @@ export default function AiRecommender() {
     const text = resume.trim();
     if (!user && !text) {
       setRecs([]);
-      setError('Please provide either a GitHub username or resume text to get recommendations.');
+      setError('Please provide tech stack details to get recommendations.');
       return;
     }
     abortRef.current?.abort();
@@ -116,13 +116,14 @@ export default function AiRecommender() {
         <span className="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary-ink">AI-Powered</span>
         <h2 className="text-4xl md:text-5xl font-extrabold font-headline tracking-tighter mt-2">Personalized Org Suggestions</h2>
         <p className="text-zinc-600 dark:text-zinc-400 mt-4 max-w-2xl">
-          Enter your GitHub username or paste your resume to get deterministic AI-style organization recommendations tailored to your skills and experience.
+          Enter your tech stack to get organization recommendations tailored to your skills and experience.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         <div className="lg:col-span-4 bg-white dark:bg-[#0D0D0D] p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm h-fit">
           <div className="space-y-5">
+            {/*
             <div>
               <label htmlFor="aiGhUsername" className="block text-sm font-bold text-zinc-900 dark:text-zinc-100 mb-1">GitHub Username</label>
               <div className="relative">
@@ -138,20 +139,21 @@ export default function AiRecommender() {
               </div>
               <p className="text-[10px] text-zinc-500 mt-1 ml-1">Used to analyze your repo languages and activity.</p>
             </div>
+            */}
 
             <div>
-              <label htmlFor="aiResumeText" className="block text-sm font-bold text-zinc-900 dark:text-zinc-100 mb-1">Resume / Skills</label>
+              <label htmlFor="aiResumeText" className="block text-sm font-bold text-zinc-900 dark:text-zinc-100 mb-1">Skills</label>
               <textarea
                 id="aiResumeText"
                 rows={4}
                 value={resume}
                 onChange={(e) => setResume(e.target.value)}
-                placeholder="Paste your resume or list your skills here (e.g. Python, React, Machine Learning)..."
+                placeholder="List your skills here (e.g. Python, React, Machine Learning)..."
                 className="w-full p-3 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 rounded-xl text-sm focus:ring-2 focus:ring-primary dark:text-white transition-all resize-none"
               />
               <div className="mt-2 flex items-center justify-between">
                 <label className="text-xs text-primary-ink font-bold cursor-pointer hover:underline flex items-center gap-1">
-                  <Icon name="upload_file" className="text-[14px]" /> Upload .txt
+                  {/* <Icon name="upload_file" className="text-[14px]" /> Upload .txt */}
                   <input ref={fileRef} type="file" id="aiResumeFile" accept=".txt" className="hidden" onChange={onFile} />
                 </label>
               </div>
@@ -192,7 +194,7 @@ export default function AiRecommender() {
             {!loading && !error && recs.length === 0 && (
               <div className="flex flex-col items-center justify-center py-20 text-center text-zinc-400 dark:text-zinc-500">
                 <Icon name="magic_button" className="text-6xl mb-4 opacity-50" />
-                <p className="font-bold">Provide your details to see personalized matches.</p>
+                <p className="font-bold">Provide tech stack details to see matches.</p>
               </div>
             )}
             {recs.length > 0 && (

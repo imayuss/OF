@@ -8,15 +8,14 @@ import { useApp } from '../../context/AppContext';
 const NAV_ITEMS = [
   { id: 'timeline', label: 'Timeline', icon: 'schedule' },
   { id: 'orgs', label: 'Organizations', icon: 'business' },
-  { id: 'ai-recommender', label: 'AI Recommender', icon: 'auto_awesome', nowrap: true },
+  { id: 'ai-recommender', label: 'Recommender', icon: 'auto_awesome', nowrap: true },
   { id: 'watchlist', label: 'Watchlist', icon: 'bookmark' },
   { id: 'issues', label: 'Issues', icon: 'bug_report' },
   { id: 'mentors', label: 'Mentors', icon: 'group' },
   { id: 'guide', label: 'Guide', icon: 'menu_book' },
 ];
 
-//const REPO_URL = 'https://github.com/S3DFX-CYBER/FindMyGSoC';
-const REPO_URL = 'www.google.com';
+const REPO_URL = 'https://github.com/imayuss/OF';
 
 /** Fixed header, slide-in mobile menu and the floating prev/next section buttons. */
 export default function Navigation() {
@@ -219,7 +218,7 @@ export default function Navigation() {
           <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-zinc-100">
             <a href={REPO_URL} target="_blank" rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-lg bg-black text-white text-sm font-bold hover:bg-primary hover:text-black dark:bg-neon dark:text-black dark:hover:bg-primary transition-colors">
-              <Icon name="star" className="text-base" /> Star &amp; Contribute.....
+              <Icon name="star" className="text-base" /> Star &amp; Contiiiribute.....
             </a>
           </div>
         </nav>
