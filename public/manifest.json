@@ -1,0 +1,23 @@
+{
+  "name": "FindMyGSoC \u2014 GSoC 2026 Org Finder",
+  "short_name": "FindMyGSoC",
+  "start_url": "/app",
+  "display": "standalone",
+  "background_color": "#FFFCEE",
+  "theme_color": "#F04400",
+  "description": "Find your perfect GSoC 2026 organization.",
+  "icons": [
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

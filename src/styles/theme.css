@@ -1,0 +1,21 @@
+/*
+ * Brand palette
+ *   fiery orange  #F04400   sunshine yellow  #FFD91A
+ *   jet black     #000000   neon green       #D0F030
+ *
+ * Rules of thumb used across the app:
+ *   - text on an orange / yellow / neon fill is always jet black (AA contrast; white on #F04400 is only 3.8:1)
+ *   - small orange *text* on light surfaces uses --primary-ink (#C13400, 5.6:1); on black it uses #FF5A1F
+ *   - neon green is a fill/highlight colour; its text-safe sibling on light surfaces is #4A6400
+ */
+:root {
+  --fiery: #F04400;
+  --sun: #FFD91A;
+  --jet: #000000;
+  --neon: #D0F030;
+  --primary-ink: 193 52 0;
+}
+.dark,
+[data-theme="dark"] {
+  --primary-ink: 255 90 31;
+}
