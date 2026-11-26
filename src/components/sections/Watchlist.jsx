@@ -24,9 +24,9 @@ export default function Watchlist() {
       <div className="max-w-7xl mx-auto">
         <div className="mb-12 flex items-start justify-between gap-4 flex-wrap">
           <div>
-            <span className="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary-ink">Scholarly Sandbox</span>
+            {/* <span className="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary-ink">Scholarly Sandbox</span> */}
             <h2 className="text-4xl md:text-5xl font-extrabold font-headline tracking-tighter mt-2">Watchlist.</h2>
-            <p className="text-zinc-600 mt-4 max-w-2xl">Curate your open-source journey. Track organizations, monitor deadlines, and prepare your proposals for GSoC 2026.</p>
+            <p className="text-zinc-600 mt-4 max-w-2xl">Curate your open source journey. Track organizations, monitor deadlines, and prepare your proposals for oss program.</p>
           </div>
           {saved.length > 0 && (
             <button
@@ -142,7 +142,7 @@ export default function Watchlist() {
 
             <div className="bg-black text-white rounded-2xl p-6 relative overflow-hidden border border-black dark:border-[#333333]">
               <div className="absolute top-0 right-0 p-4 opacity-30 text-neon"><Icon name="auto_awesome" className="text-5xl" /></div>
-              <h4 className="font-bold mb-3 text-neon">AI Application Insight</h4>
+              <h4 className="font-bold mb-3 text-neon">Saved Orgs Insight</h4>
               <div id="aiInsightText" className="text-sm text-white/90 leading-relaxed mb-4">
                 <Insight insight={insight} />
               </div>

@@ -155,7 +155,7 @@ export default function Navigation() {
               <Icon name="help" className="text-zinc-600" />
             </button>
 
-            <a
+            {/* <a
               href={REPO_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -164,7 +164,7 @@ export default function Navigation() {
               <Icon name="star" className="text-sm" />
               <span className="lg:hidden xl:inline">Star &amp; Contribute</span>
               <span className="hidden lg:inline xl:hidden">Star</span>
-            </a>
+            </a> */}
           </div>
         </div>
       </header>
@@ -215,12 +215,12 @@ export default function Navigation() {
             ))}
           </div>
 
-          <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-zinc-100">
+          {/* <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-zinc-100">
             <a href={REPO_URL} target="_blank" rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-lg bg-black text-white text-sm font-bold hover:bg-primary hover:text-black dark:bg-neon dark:text-black dark:hover:bg-primary transition-colors">
               <Icon name="star" className="text-base" /> Star &amp; Contiiiribute.....
             </a>
-          </div>
+          </div> */}
         </nav>
       </div>
     </>

@@ -27,7 +27,7 @@ async function analyzeProfile(username, resume, { signal } = {}) {
 }
 
 export default function AiRecommender() {
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState('imayuss');
   const [resume, setResume] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -113,8 +113,8 @@ export default function AiRecommender() {
   return (
     <section id="ai-recommender" className="px-6 max-w-7xl mx-auto py-20 border-t border-zinc-100 dark:border-zinc-800">
       <div className="mb-12">
-        <span className="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary-ink">AI-Powered</span>
-        <h2 className="text-4xl md:text-5xl font-extrabold font-headline tracking-tighter mt-2">Personalized Org Suggestions</h2>
+        {/* <span className="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary-ink">AI-Powered</span> */}
+        <h2 className="text-4xl md:text-5xl font-extrabold font-headline tracking-tighter mt-2">Org Suggestions</h2>
         <p className="text-zinc-600 dark:text-zinc-400 mt-4 max-w-2xl">
           Enter your tech stack to get organization recommendations tailored to your skills and experience.
         </p>
