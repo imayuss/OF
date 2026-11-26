@@ -6,7 +6,7 @@ import FilterChips from '../orgs/FilterChips';
 import LanguageFilters from '../orgs/LanguageFilters';
 import MobileFilters from '../orgs/MobileFilters';
 import { ORGS } from '../../data/orgs';
-import { CATEGORY_OPTIONS, COMPLEXITY_OPTIONS, SORT_OPTIONS } from '../../lib/filters';
+import { CATEGORY_OPTIONS, COMPLEXITY_OPTIONS, PROGRAM_OPTIONS, SORT_OPTIONS } from '../../lib/filters';
 import { ITEMS_PER_PAGE, scrollDirectoryToTop } from '../../lib/utils';
 import { useApp } from '../../context/AppContext';
 
@@ -77,6 +77,7 @@ export default function OrgDirectory({ filters }) {
           Showing <strong id="orgCount">{filtered.length}</strong> of <span>{ORGS.length}</span> organizations
         </p>
         <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
+          <FilterSelect id="programFilter" label="Filter by program" value={filters.program || 'all'} options={PROGRAM_OPTIONS} onChange={filters.setProgram} />
           <FilterSelect id="categoryFilter" label="Filter by category" value={filters.category} options={CATEGORY_OPTIONS} onChange={filters.setCategory} />
           <FilterSelect id="complexityFilter" label="Filter by complexity" value={filters.complexity} options={COMPLEXITY_OPTIONS} onChange={filters.setComplexity} />
           <FilterSelect id="sortSelect" label="Sort organizations" value={filters.sort} options={SORT_OPTIONS} onChange={filters.setSort} />

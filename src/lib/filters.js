@@ -10,6 +10,13 @@ export const CHIPS = [
   { key: 'bookmarked', label: 'Bookmarked', icon: 'star', filled: true, tooltip: 'Organizations you saved for later' },
 ];
 
+export const PROGRAM_OPTIONS = [
+  ['all', 'Programs: All'],
+  ['gsoc', 'GSoC'],
+  ['gssoc', 'GSSoC'],
+  ['nsoc', 'NSoC'],
+];
+
 export const CATEGORY_OPTIONS = [
   ['all', 'Categories: All'], ['web', 'Web'], ['programming', 'Programming'], ['science', 'Science'],
   ['os', 'OS'], ['infra', 'Infra'], ['security', 'Security'], ['data', 'Data'], ['media', 'Media'], ['other', 'Other'],
@@ -26,6 +33,14 @@ export const SORT_OPTIONS = [
 
 const COMPETITION_ORDER = ['chill', 'moderate', 'hot'];
 
+function getOrgProgram(org) {
+  if (org.program) return String(org.program).toLowerCase();
+  const tags = (org.tags || []).map((t) => String(t).toLowerCase());
+  if (tags.includes('gssoc') || tags.includes('gssoc26') || tags.includes('girlscriptsummerofcode')) return 'gssoc';
+  if (tags.includes('nsoc') || tags.includes('nsoc26')) return 'nsoc';
+  return 'gsoc';
+}
+
 export function applySecondarySort(a, b, sortType) {
   if (sortType === 'years-desc') return b.years - a.years;
   if (sortType === 'years-asc') return a.years - b.years;
@@ -36,17 +51,19 @@ export function applySecondarySort(a, b, sortType) {
 }
 
 /**
- * All conditions are additive: chip + language pills + search + dropdowns compose.
- * Pure function — no DOM access.
+- All conditions are additive: program + chip + language pills + search + dropdowns compose.
+- Pure function — no DOM access.
  */
 export function filterOrgs(orgs, filters, bookmarked) {
   const query = (filters.query || '').trim().toLowerCase();
+  const program = !filters.program || filters.program === 'all' ? '' : String(filters.program).toLowerCase();
   const cat = !filters.category || filters.category === 'all' ? '' : filters.category;
   const comp = filters.complexity || 'all';
   const sort = filters.sort || 'alpha';
   const languages = filters.languages || [];
 
   const result = orgs.filter((o) => {
+    const matchProgram = !program || getOrgProgram(o) === program;
     const matchSearch = o.name.toLowerCase().includes(query);
     const matchCat = !cat || o.cat === cat;
     const matchComp = comp === 'all' || o.codebase === comp;
@@ -64,7 +81,7 @@ export function filterOrgs(orgs, filters, bookmarked) {
     else if (filters.chip === 'low-competition') matchChip = o.competition === 'chill';
     else if (filters.chip === 'high-competition') matchChip = o.competition === 'hot';
 
-    return matchSearch && matchCat && matchComp && matchLang && matchChip;
+    return matchProgram && matchSearch && matchCat && matchComp && matchLang && matchChip;
   });
 
   if (query) {
