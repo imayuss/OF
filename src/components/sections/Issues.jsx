@@ -101,14 +101,13 @@ export default function Issues() {
       <div className="mb-12">
         <span className="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary-ink">First Contributions</span>
         <h2 className="text-4xl md:text-5xl font-extrabold font-headline tracking-tighter mt-2">Good First Issues</h2>
-        <p className="text-zinc-600 mt-4 max-w-2xl">Pre-fetched from all GSoC 2026 orgs every 6 hours — no rate limits, no token required, instant results.</p>
+        <p className="text-zinc-600 mt-4 max-w-2xl">Pre-fetched orgs from various oss programs — no rate limits, no token required, instant results.</p>
       </div>
 
       <div
         id="issuesBanner"
-        className={`rounded-2xl p-6 mb-8 flex flex-col sm:flex-row items-start sm:items-center gap-4 border ${
-          stale ? 'bg-zinc-50 dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700' : 'bg-green-50 border-green-200'
-        }`}
+        className={`rounded-2xl p-6 mb-8 flex flex-col sm:flex-row items-start sm:items-center gap-4 border ${stale ? 'bg-zinc-50 dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700' : 'bg-green-50 border-green-200'
+          }`}
       >
         <div className="flex items-center gap-3">
           <div id="issuesBannerDot" className={`w-3 h-3 rounded-full ${stale ? 'bg-zinc-400' : 'bg-green-500 pulse-dot'}`} />
@@ -119,14 +118,14 @@ export default function Issues() {
             </p>
           </div>
         </div>
-        <div className="sm:ml-auto flex flex-col items-start sm:items-end gap-1">
+        {/* <div className="sm:ml-auto flex flex-col items-start sm:items-end gap-1">
           <span id="issuesLastUpdated" className={`text-xs font-mono ${stale ? 'text-zinc-500 dark:text-zinc-400' : 'text-green-600'}`}>{lastUpdated}</span>
           {stale && (
             <span id="issuesStaleNote" className="text-xs font-medium text-amber-700 bg-amber-50 border border-amber-200 rounded-full px-2 py-0.5">
               ⏸ GSoC selection complete. Data won&apos;t update frequently.
             </span>
           )}
-        </div>
+        </div> */}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">{cards}</div>

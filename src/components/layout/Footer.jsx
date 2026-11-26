@@ -20,12 +20,12 @@ export default function Footer() {
         <div className="lg:col-span-2 flex flex-col gap-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-primary-container flex items-center justify-center shadow-lg shadow-orange-500/20">
-              <span className="text-black font-extrabold text-xl font-headline">G</span>
+              <span className="text-black font-extrabold text-xl font-headline">OF</span>
             </div>
-            <span className="text-2xl font-extrabold font-headline tracking-tight text-zinc-900 dark:text-zinc-50">FindMy<span className="text-primary-ink">GSoC</span></span>
+            <span className="text-2xl font-extrabold font-headline tracking-tight text-zinc-900 dark:text-zinc-50">OrgFinder</span>
           </div>
           <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-sm">
-            Discover Google Summer of Code organizations, search beginner-friendly issues, and compare programs in real
+            Discover various oss programs organizations, search beginner-friendly issues and compare programs in real
             time.
           </p>
           <p className="text-xs text-zinc-400 dark:text-zinc-500 italic max-w-sm">
@@ -66,6 +66,7 @@ export default function Footer() {
             <a className="footer-link text-sm text-zinc-600 hover:text-primary-ink dark:text-zinc-300 dark:hover:text-primary-ink transition-all" href="https://lfx.linuxfoundation.org" target="_blank" rel="noopener noreferrer">LFX Mentorship</a>
             <a className="footer-link text-sm text-zinc-600 hover:text-primary-ink dark:text-zinc-300 dark:hover:text-primary-ink transition-all" href="https://www.summerofbitcoin.org/" target="_blank" rel="noopener noreferrer">Summer of Bitcoin</a>
             <a className="footer-link text-sm text-zinc-600 hover:text-primary-ink dark:text-zinc-300 dark:hover:text-primary-ink transition-all" href="https://gssoc.girlscript.org/" target="_blank" rel="noopener noreferrer">GSSoC</a>
+            <a className="footer-link text-sm text-zinc-600 hover:text-primary-ink dark:text-zinc-300 dark:hover:text-primary-ink transition-all" href="https://gssoc.girlscript.org/" target="_blank" rel="noopener noreferrer">NSoC</a>
           </nav>
         </div>
 

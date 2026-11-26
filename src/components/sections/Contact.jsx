@@ -1,9 +1,9 @@
 import Icon from '../ui/Icon';
 
 const CARDS = [
-  { href: 'https://github.com/S3DFX-CYBER', icon: 'person', title: 'GitHub Profile', body: 'Follow the maintainer and check out other projects.' },
-  { href: 'https://github.com/S3DFX-CYBER/FindMyGSoC/issues', icon: 'bug_report', title: 'Report Issues', body: 'Found a bug or have a feature request? Open an issue.' },
-  { href: 'https://discord.gg/jYrbHKtn8t', icon: 'forum', title: 'Join Discord', body: 'Connect with the community for discussions and support.' },
+  { href: 'https://github.com/imayuss', icon: 'person', title: 'GitHub Profile', body: 'Follow the maintainer and check out other projects.' },
+  { href: 'https://github.com/imayuss/OF/issues', icon: 'bug_report', title: 'Report Issues', body: 'Found a bug or have a feature request? Open an issue.' },
+  /** { href: 'https://discord.gg/jYrbHKtn8fft', icon: 'forum', title: 'Join Discord', body: 'Connect with the community for discussions and support.' },*/
 ];
 
 export default function Contact() {
@@ -11,7 +11,7 @@ export default function Contact() {
     <section id="contact" className="py-20 px-6 max-w-7xl mx-auto">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-extrabold font-headline tracking-tight mb-4">Get in Touch</h2>
-        <p className="text-zinc-600 max-w-2xl mx-auto">Have questions, feedback, or need help? We&apos;d love to hear from you.</p>
+        <p className="text-zinc-600 max-w-2xl mx-auto">Have questions, feedback or need help? We&apos;d love to hear from you.</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
         {CARDS.map((c) => (

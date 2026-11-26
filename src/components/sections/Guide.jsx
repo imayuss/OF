@@ -1,9 +1,7 @@
 import { useState } from 'react';
 
 /**
- * "New to GSoC? Start here." roadmap.
- * Markup is converted 1:1 from the original index.html; the accordion that used to be
- * driven by DOM class toggling (is-open / faq-open / inert) is now plain React state.
+ * "New to GSoC? Start here." roadmap with GSSoC and NSoC blocks.
  * Only one block can be open at a time, and FAQs are reset whenever a block toggles.
  */
 export default function Guide() {
@@ -27,14 +25,13 @@ export default function Guide() {
   return (
     <section id="guide" className="py-20 px-6 max-w-7xl mx-auto">
       <div className="mb-12">
-        <span className="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary-ink">GSoC 101</span>
-        <h2 className="text-4xl md:text-5xl font-extrabold font-headline tracking-tighter mt-2">New to GSoC? Start here.</h2>
-        <p className="text-zinc-600 mt-4 max-w-2xl">An interactive roadmap — from understanding the program to landing your first acceptance. Click any block to expand its guide and FAQs.</p>
+        {/* <span className="font-label text-xs font-bold uppercase tracking-[0.2em] text-primary-ink">GSSoC 101</span> */}
+        <h2 className="text-4xl md:text-5xl font-extrabold font-headline tracking-tighter mt-2">New to OSS? Start here.</h2>
+        <p className="text-zinc-600 mt-4 max-w-2xl">An interactive roadmap — from understanding the programs to landing your first acceptance, plus guides for GSSoC, GSoC and NSoC. Click any block to expand its guide and FAQs.</p>
       </div>
 
       <div className="space-y-4" id="gsocRoadmap">
 
-    
         <div className={`roadmap-block${openBlock === 0 ? ' is-open' : ''}`} data-block="0">
           <button className="roadmap-block-header" type="button" aria-expanded={openBlock === 0} aria-controls="roadmap-block-0" onClick={() => toggleBlock(0)}>
             <span className="roadmap-illus" aria-hidden="true" style={{ display: 'block' }}>
@@ -102,7 +99,6 @@ export default function Guide() {
           </div>
         </div>
 
-    
         <div className={`roadmap-block${openBlock === 1 ? ' is-open' : ''}`} data-block="1">
           <button className="roadmap-block-header" type="button" aria-expanded={openBlock === 1} aria-controls="roadmap-block-1" onClick={() => toggleBlock(1)}>
             <span className="roadmap-illus" aria-hidden="true" style={{ display: 'block' }}>
@@ -171,7 +167,6 @@ export default function Guide() {
           </div>
         </div>
 
-    
         <div className={`roadmap-block${openBlock === 2 ? ' is-open' : ''}`} data-block="2">
           <button className="roadmap-block-header" type="button" aria-expanded={openBlock === 2} aria-controls="roadmap-block-2" onClick={() => toggleBlock(2)}>
             <span className="roadmap-illus" aria-hidden="true" style={{ display: 'block' }}>
@@ -241,7 +236,6 @@ export default function Guide() {
           </div>
         </div>
 
-    
         <div className={`roadmap-block${openBlock === 3 ? ' is-open' : ''}`} data-block="3">
           <button className="roadmap-block-header" type="button" aria-expanded={openBlock === 3} aria-controls="roadmap-block-3" onClick={() => toggleBlock(3)}>
             <span className="roadmap-illus" aria-hidden="true" style={{ display: 'block' }}>
@@ -309,7 +303,6 @@ export default function Guide() {
           </div>
         </div>
 
-    
         <div className={`roadmap-block${openBlock === 4 ? ' is-open' : ''}`} data-block="4">
           <button className="roadmap-block-header" type="button" aria-expanded={openBlock === 4} aria-controls="roadmap-block-4" onClick={() => toggleBlock(4)}>
             <span className="roadmap-illus" aria-hidden="true" style={{ display: 'block' }}>
@@ -387,9 +380,132 @@ export default function Guide() {
           </div>
         </div>
 
+        {/* GSSoC Block */}
+        <div className={`roadmap-block${openBlock === 5 ? ' is-open' : ''}`} data-block="5">
+          <button className="roadmap-block-header" type="button" aria-expanded={openBlock === 5} aria-controls="roadmap-block-5" onClick={() => toggleBlock(5)}>
+            <span className="roadmap-illus" aria-hidden="true" style={{ display: 'block' }}>
+              <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="56" height="56" rx="16" fill="rgba(236,72,153,0.10)" />
+                <rect x="7" y="15" width="42" height="26" rx="8" fill="#fdf2f8" stroke="#fbcfe8" strokeWidth="1.2" />
+                <circle cx="17" cy="28" r="6" fill="#ec4899" opacity="0.85" />
+                <text x="17" y="30.5" textAnchor="middle" fontSize="6" fontWeight="800" fill="white">GS</text>
+                <rect x="26" y="22" width="16" height="3" rx="1.5" fill="#f472b6" />
+                <rect x="26" y="28" width="12" height="3" rx="1.5" fill="#f9a8d4" />
+                <rect x="26" y="34" width="14" height="2.5" rx="1.25" fill="#fbcfe8" />
+              </svg>
+            </span>
+            <span className="flex-1 min-w-0" style={{ display: 'block' }}>
+              <span className="flex items-center gap-3 mb-1" style={{ display: 'flex' }}>
+                <span className="text-xs font-bold font-label uppercase tracking-widest text-pink-600 opacity-70">06</span>
+                <span className="text-lg font-extrabold text-zinc-900 font-headline" style={{ display: 'block' }}>GSSoC (GirlScript Summer of Code)</span>
+              </span>
+              <span className="text-sm text-zinc-500" style={{ display: 'block' }}>Community-driven open source &amp; builder tracks run by the GirlScript Foundation.</span>
+            </span>
+            <span className="material-symbols-outlined roadmap-chevron">expand_more</span>
+          </button>
+          <div className="roadmap-block-body" id="roadmap-block-5" inert="">
+            <div className="roadmap-block-inner pt-6">
+              <div className="mb-6">
+                <div className="roadmap-step-row">
+                  <div className="roadmap-step-num" style={{ background: 'rgba(236,72,153,0.12)', color: '#db2777' }}>1</div>
+                  <p className="text-sm text-zinc-700 leading-relaxed"><strong>Program Overview.</strong> Launched in 2018 by the GirlScript Foundation, GSSoC brings together students, developers, and AI builders across open source repositories and specialized tracks such as AI Agents.</p>
+                </div>
+                <div className="roadmap-step-row">
+                  <div className="roadmap-step-num" style={{ background: 'rgba(236,72,153,0.12)', color: '#db2777' }}>2</div>
+                  <p className="text-sm text-zinc-700 leading-relaxed"><strong>Quality &amp; Real Building.</strong> Contributors work with mentors and project admins on issues, pull requests, and practical builds rather than trivial edits.</p>
+                </div>
+                <div className="roadmap-step-row">
+                  <div className="roadmap-step-num" style={{ background: 'rgba(236,72,153,0.12)', color: '#db2777' }}>3</div>
+                  <p className="text-sm text-zinc-700 leading-relaxed"><strong>Leaderboard &amp; Recognition.</strong> Merged PRs, completed tasks, and partner bounties earn leaderboard points, with certificates, swag, and top-contributor recognition offered at program end.</p>
+                </div>
+              </div>
+              <div className="rounded-2xl bg-pink-50 border border-pink-100 p-4 mb-6 flex items-center justify-center gap-2 text-xs font-semibold text-zinc-600 flex-wrap">
+                <span>Register &amp; Onboard</span><span className="text-pink-400 font-bold">──►</span>
+                <span>Pick Track &amp; Issues</span><span className="text-pink-400 font-bold">──►</span>
+                <span>Merged PRs &amp; Bounties</span><span className="text-pink-400 font-bold">──►</span>
+                <span className="text-pink-700">Leaderboard &amp; Certs ✓</span>
+              </div>
+              <div>
+                <p className="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-2">Common Questions</p>
+                <div className={`roadmap-faq-item${openFaqs.has('5-0') ? ' faq-open' : ''}`}>
+                  <button className="roadmap-faq-trigger" aria-expanded={openFaqs.has('5-0')} onClick={() => toggleFaq('5-0')}><span className="text-xs font-semibold text-zinc-800">Who can participate in GSSoC?</span><span className="material-symbols-outlined roadmap-faq-chevron">expand_more</span></button>
+                  <div className="roadmap-faq-answer" inert=""><p className="text-xs text-zinc-500 pb-3 leading-relaxed">GSSoC is open to beginners, students, developers, and AI builders looking to gain hands-on open source and collaboration experience.</p></div>
+                </div>
+                <div className={`roadmap-faq-item${openFaqs.has('5-1') ? ' faq-open' : ''}`}>
+                  <button className="roadmap-faq-trigger" aria-expanded={openFaqs.has('5-1')} onClick={() => toggleFaq('5-1')}><span className="text-xs font-semibold text-zinc-800">How are contributions tracked and scored?</span><span className="material-symbols-outlined roadmap-faq-chevron">expand_more</span></button>
+                  <div className="roadmap-faq-answer" inert=""><p className="text-xs text-zinc-500 pb-3 leading-relaxed">Contributions such as merged pull requests, completed tasks, and eligible partner bounties are tracked on the program leaderboard.</p></div>
+                </div>
+                <div className={`roadmap-faq-item${openFaqs.has('5-2') ? ' faq-open' : ''}`}>
+                  <button className="roadmap-faq-trigger" aria-expanded={openFaqs.has('5-2')} onClick={() => toggleFaq('5-2')}><span className="text-xs font-semibold text-zinc-800">Does GSSoC offer tracks beyond standard repo issues?</span><span className="material-symbols-outlined roadmap-faq-chevron">expand_more</span></button>
+                  <div className="roadmap-faq-answer" inert=""><p className="text-xs text-zinc-500 pb-3 leading-relaxed">Yes — editions have featured dedicated builder and AI tracks alongside open source contributions and partner challenges.</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* NSoC Block */}
+        <div className={`roadmap-block${openBlock === 6 ? ' is-open' : ''}`} data-block="6">
+          <button className="roadmap-block-header" type="button" aria-expanded={openBlock === 6} aria-controls="roadmap-block-6" onClick={() => toggleBlock(6)}>
+            <span className="roadmap-illus" aria-hidden="true" style={{ display: 'block' }}>
+              <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="56" height="56" rx="16" fill="rgba(20,184,166,0.10)" />
+                <polygon points="28,11 43,20 43,36 28,45 13,36 13,20" fill="#f0fdfa" stroke="#5eead4" strokeWidth="1.2" />
+                <text x="28" y="31" textAnchor="middle" fontSize="6.5" fontWeight="800" fill="#0f766e">NSoC</text>
+              </svg>
+            </span>
+            <span className="flex-1 min-w-0" style={{ display: 'block' }}>
+              <span className="flex items-center gap-3 mb-1" style={{ display: 'flex' }}>
+                <span className="text-xs font-bold font-label uppercase tracking-widest text-teal-600 opacity-70">07</span>
+                <span className="text-lg font-extrabold text-zinc-900 font-headline" style={{ display: 'block' }}>NSoC (Open Source Sprint &amp; Winter Editions)</span>
+              </span>
+              <span className="text-sm text-zinc-500" style={{ display: 'block' }}>Sprint-based open source contribution program focused on real codebases, PRs, and leaderboards.</span>
+            </span>
+            <span className="material-symbols-outlined roadmap-chevron">expand_more</span>
+          </button>
+          <div className="roadmap-block-body" id="roadmap-block-6" inert="">
+            <div className="roadmap-block-inner pt-6">
+              <div className="mb-6">
+                <div className="roadmap-step-row">
+                  <div className="roadmap-step-num" style={{ background: 'rgba(20,184,166,0.12)', color: '#0d9488' }}>1</div>
+                  <p className="text-sm text-zinc-700 leading-relaxed"><strong>Real Codebases.</strong> Project admins bring active repositories and curated issues so contributors can ship meaningful fixes and features with maintainer guidance.</p>
+                </div>
+                <div className="roadmap-step-row">
+                  <div className="roadmap-step-num" style={{ background: 'rgba(20,184,166,0.12)', color: '#0d9488' }}>2</div>
+                  <p className="text-sm text-zinc-700 leading-relaxed"><strong>Multiple Roles.</strong> Participants can join as Contributors, Project Kernels / Project Admins, or Campus Ambassadors depending on how they want to contribute.</p>
+                </div>
+                <div className="roadmap-step-row">
+                  <div className="roadmap-step-num" style={{ background: 'rgba(20,184,166,0.12)', color: '#0d9488' }}>3</div>
+                  <p className="text-sm text-zinc-700 leading-relaxed"><strong>Leaderboard &amp; Tracks.</strong> Reviewed pull requests earn leaderboard points across editions (including sprint and winter editions), with track rewards and recognition.</p>
+                </div>
+              </div>
+              <div className="rounded-2xl bg-teal-50 border border-teal-100 p-4 mb-6 flex items-center justify-center gap-2 text-xs font-semibold text-zinc-600 flex-wrap">
+                <span>Register &amp; Pick Track</span><span className="text-teal-500 font-bold">──►</span>
+                <span>Claim Curated Issue</span><span className="text-teal-500 font-bold">──►</span>
+                <span>Submit &amp; Merge PR</span><span className="text-teal-500 font-bold">──►</span>
+                <span className="text-teal-700">Leaderboard &amp; Results ✓</span>
+              </div>
+              <div>
+                <p className="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-2">Common Questions</p>
+                <div className={`roadmap-faq-item${openFaqs.has('6-0') ? ' faq-open' : ''}`}>
+                  <button className="roadmap-faq-trigger" aria-expanded={openFaqs.has('6-0')} onClick={() => toggleFaq('6-0')}><span className="text-xs font-semibold text-zinc-800">How are contributors evaluated in NSoC?</span><span className="material-symbols-outlined roadmap-faq-chevron">expand_more</span></button>
+                  <div className="roadmap-faq-answer" inert=""><p className="text-xs text-zinc-500 pb-3 leading-relaxed">Participants earn points on a leaderboard as project admins and maintainers review and merge their pull requests during the active window.</p></div>
+                </div>
+                <div className={`roadmap-faq-item${openFaqs.has('6-1') ? ' faq-open' : ''}`}>
+                  <button className="roadmap-faq-trigger" aria-expanded={openFaqs.has('6-1')} onClick={() => toggleFaq('6-1')}><span className="text-xs font-semibold text-zinc-800">Can I maintain a project instead of only contributing code?</span><span className="material-symbols-outlined roadmap-faq-chevron">expand_more</span></button>
+                  <div className="roadmap-faq-answer" inert=""><p className="text-xs text-zinc-500 pb-3 leading-relaxed">Yes — project admins/kernels can submit repositories, curate issues, and review PRs, while others can join as campus ambassadors.</p></div>
+                </div>
+                <div className={`roadmap-faq-item${openFaqs.has('6-2') ? ' faq-open' : ''}`}>
+                  <button className="roadmap-faq-trigger" aria-expanded={openFaqs.has('6-2')} onClick={() => toggleFaq('6-2')}><span className="text-xs font-semibold text-zinc-800">Are there special partner tracks in NSoC?</span><span className="material-symbols-outlined roadmap-faq-chevron">expand_more</span></button>
+                  <div className="roadmap-faq-answer" inert=""><p className="text-xs text-zinc-500 pb-3 leading-relaxed">Yes — editions can include sponsored tracks and bounties alongside main leaderboard rankings.</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-  
       <div className="mt-10 pt-8 border-t border-zinc-100">
         <p className="text-xs font-bold uppercase tracking-widest text-zinc-400 mb-4">Useful Resources</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-sm">
@@ -413,9 +529,16 @@ export default function Guide() {
             <p className="font-bold mb-1 text-zinc-900">First Contributions</p>
             <p className="text-zinc-500 text-xs">Hands-on tutorial to practice your first fork, commit, and pull request.</p>
           </a>
+          <a href="https://gssoc.girlscript.org/" target="_blank" rel="noopener noreferrer" className="block p-4 rounded-2xl border border-zinc-200 hover:border-primary hover:bg-orange-50 transition-colors">
+            <p className="font-bold mb-1 text-zinc-900">GSSoC Official Portal</p>
+            <p className="text-zinc-500 text-xs">GirlScript Summer of Code tracks, leaderboard, and program details.</p>
+          </a>
+          <a href="https://www.nsoc.in/" target="_blank" rel="noopener noreferrer" className="block p-4 rounded-2xl border border-zinc-200 hover:border-primary hover:bg-orange-50 transition-colors">
+            <p className="font-bold mb-1 text-zinc-900">NSoC Official Portal</p>
+            <p className="text-zinc-500 text-xs">Projects, timeline, roles, and leaderboard for NSoC editions.</p>
+          </a>
         </div>
       </div>
     </section>
-
   );
 }
