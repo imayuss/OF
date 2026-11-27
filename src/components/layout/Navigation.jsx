@@ -98,10 +98,9 @@ export default function Navigation() {
 
             <a href="#timeline" className="flex items-center gap-2" id="logoLink" onClick={go('timeline')}>
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-primary-container flex items-center justify-center flex-shrink-0">
-                <span className="text-black font-bold text-sm">G</span>
+                <span className="text-black font-bold text-sm">OF</span>
               </div>
               <span className="text-base sm:text-lg font-extrabold tracking-tight text-zinc-900 font-headline whitespace-nowrap">
-                <span className="hidden sm:inline">GSoC 2026 </span>
                 <span className="text-primary-ink italic">Org Finder</span>
               </span>
             </a>
